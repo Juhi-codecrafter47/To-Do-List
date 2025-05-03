@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Menu -->
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <span>Tasks</span>
+                    <ul class="submenu">
+                        <li><a href="#">Upcoming</a></li>
+                        <li class="active"><a href="./task.html">Today</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="./signup.html"><i class="fas fa-sign-out-alt"></i> Sign out</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Task Section -->
+        <div class="task-section">
+            <h1>Today</h1>
+            <div class="task-list">
+                <div class="task-input">
+                    <button class="add-task-btn" onclick="addTask()">&#43;</button>
+                    <input type="text" id="new-task-input" placeholder="Add New Task">
+                </div>
+                <ul id="task-list">
+                    <li>
+                        <div class="task-name">
+                            <input type="checkbox" id="task1">
+                            <label for="task1">Task 1</label>
+                        </div>                        
+                    </li>
+                    <li>
+                        <div class="task-name">
+                            <input type="checkbox" id="task2">
+                            <label for="task2">Task 2</label>                            
+                        </div>                        
+                    </li>
+                    <li>
+                        <div class="task-name">
+                            <input type="checkbox" id="task3">
+                            <label for="task3">Task 3</label>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="task-actions">
+                <button class="delete-task-btn" onclick="deleteTask()">Delete Task</button>
+                <button class="save-changes-btn" onclick="saveChanges()">Save changes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="task.js"></script>
+</body>
+</html>
